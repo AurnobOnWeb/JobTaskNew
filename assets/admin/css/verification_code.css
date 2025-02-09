@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+.login-area{
+    width: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 40px;
+}
+
+.verification-code {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    height: 50px;
+    width: 100%;
+}
+
+
+.verification-code::after {
+    position: absolute;
+    content: '';
+    right: -37px;
+    width: 35px;
+    height: 50px;
+    background-color: #ffffff;
+    z-index: 2;
+}
+
+.verification-code input {
+    position: absolute;
+    height: 50px;
+    width: calc(100% + 80px);
+    left: 0;
+    background: transparent;
+    border: none;
+    font-size: 25px !important;
+    font-weight: 600;
+    letter-spacing: 51px;
+    text-indent: 1px;
+    border: none;
+    z-index: 1;
+    color: #5b6e88 !important;
+    padding-left: 23px;
+    border-color: transparent !important;
+}
+
+.verification-code input:focus {
+    outline: none;
+    cursor: pointer;
+    box-shadow: none;
+    border-color: transparent !important;
+}
+.boxes {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: -1;
+}
+.verification-code span {
+    height: 50px;
+    width: calc((100% / 6) - 3px);
+    background: #F1F1F1;
+    border: solid 1px #dee4ec;
+    text-align: center;
+    line-height: 50px;
+    color: #CDC8C8
+}
+
+.verification-code span {
+    height: 50px;
+    width: calc((100% / 6) - 3px);
+    background: #f1f1f100;
+    border: solid 1px #dee4ec;
+    text-align: center;
+    line-height: 50px;
+    color: #cdc8c8;
+}
+
+.login-area::after {
+    z-index: -1;
+}
+
+
+.verification-text{
+    font-size: 1.2rem;
+}
+@media (max-width: 525px) {
+    .login-area {
+        width: 350px;
+    }
+
+    .verification-code input {
+        letter-spacing: 29px;
+        padding-left: 13px;
+    }
+}
+
+
+@media (max-width: 424px) {
+    .login-area {
+        width: 300px;
+    }
+
+    .verification-code input {
+        height: 40px;
+        padding-left: 11px;
+        letter-spacing: 27px;
+        font-size: 16px !important;
+    }
+
+    .verification-code {
+        height: 40px;
+    }
+    
+    .verification-code::after {
+        height: 40px;
+    }
+
+    .verification-code span{
+        height: 40px;
+        line-height: 40px;
+    }
+}
