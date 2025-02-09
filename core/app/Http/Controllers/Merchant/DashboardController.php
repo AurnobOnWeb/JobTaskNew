@@ -9,6 +9,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view("merchant.dashboard");
+        $pageTitle = "Dashboard";
+        return view("merchant.dashboard", compact("pageTitle"));
     }
 }

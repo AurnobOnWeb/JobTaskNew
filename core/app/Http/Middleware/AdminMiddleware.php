@@ -20,7 +20,7 @@ class AdminMiddleware
             return $next($request);
         }
 
-        // Redirect or abort if not an admin
+        // Redirect or abort if not a admin
         return redirect()->route('admin.login')->with('error', 'You do not have access to this section.');
     }
 }

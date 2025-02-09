@@ -73,12 +73,12 @@ return [
             'model' => env('AUTH_MODEL', App\Models\User::class),
         ],
 
-        'admins' => [
+        'admin' => [
             'driver' => 'eloquent',
             'model' => App\Models\Admin::class,
         ],
 
-        'merchants' => [
+        'merchant' => [
             'driver' => 'eloquent',
             'model' => App\Models\Merchant::class,
         ],

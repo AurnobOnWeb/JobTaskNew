@@ -1,4 +1,4 @@
-@extends('admin.layouts.master')
+@extends('merchant.layouts.master')
 @section('content')
 <div class="login-main" style="background-image: url('{{ asset('assets/admin/images/login.jpg') }}')">
     <div class="container custom-container">

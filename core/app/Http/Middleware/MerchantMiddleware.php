@@ -20,8 +20,7 @@ class MerchantMiddleware
             return $next($request);
         }
 
-        // Redirect or abort if not an merchant
+        // Redirect or abort if not a merchant
         return redirect()->route('merchant.login')->with('error', 'You do not have access to this section.');
     }
-
 }

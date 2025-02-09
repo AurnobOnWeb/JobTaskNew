@@ -1,4 +1,4 @@
-@extends('admin.layouts.master')
+@extends('merchant.layouts.master')
 @section('content')
 <div class="login-main" style="background-image: url('{{ asset('assets/admin/images/login.jpg') }}')">
     <div class="container custom-container">
@@ -12,13 +12,13 @@
                                 @lang('Dashboard')</p>
                         </div>
                         <div class="login-wrapper__body">
-                            <form action="{{ route('admin.login') }}" method="POST"
+                            <form action="{{ route('merchant.login') }}" method="POST"
                                 class="cmn-form mt-30 has-gcaptcha login-form">
                                 @csrf
                                 <div class="form-group">
-                                    <label>@lang('Username')</label>
-                                    <input type="text" class="form-control" value="{{ old('username') }}"
-                                        name="username" required>
+                                    <label>@lang('Email')</label>
+                                    <input type="email" class="form-control" value="{{ old('email') }}" name="email"
+                                        required>
                                 </div>
                                 <div class="form-group">
                                     <div class="d-flex justify-content-between">

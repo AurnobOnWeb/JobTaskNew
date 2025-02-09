@@ -26,7 +26,7 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::guard('merchant')->attempt($credentials)) {
-            return redirect()->intended('/merchant/dashboard');
+            return redirect()->intended(route('merchant.dashboard'));
         }
 
         return back()->withErrors([
@@ -37,7 +37,8 @@ class AuthController extends Controller
     public function logout()
     {
         Auth::guard('merchant')->logout();
-        return redirect('/login');
+
+        return redirect()->route('merchant.login');
     }
 
 
