@@ -119,7 +119,7 @@ function getAmount($amount, $length = 2)
 
 function removeElement($array, $value)
 {
-    return array_diff($array, (is_array($value) ? $value : array($value)));
+    return array_diff($array, (is_array($value) ? $value : [$value]));
 }
 
 function cryptoQR($wallet)
